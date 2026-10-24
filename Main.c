@@ -231,7 +231,7 @@ static void page_end(char *page, size_t cap, size_t *off) {
 static void serve_index(int fd) {
     char page[16384];
     size_t off = 0;
-    page_begin(page, sizeof(page), &off, "C Sistem İzleyici");
+    page_begin(page, sizeof(page), &off, "Sistem İzleyici");
     app(page, sizeof(page), &off,
         "<div class='card'><ul><li><a href='/dashboard'><b>Master Dashboard</b></a></li></ul></div>\n");
 
@@ -264,7 +264,7 @@ static void serve_view(int fd, int m) {
 static void serve_dashboard(int fd) {
     char page[16384];
     size_t off = 0;
-    page_begin(page, sizeof(page), &off, "C Master Sistem Paneli");
+    page_begin(page, sizeof(page), &off, "Master Sistem Paneli");
     page_bar(page, sizeof(page), &off);
     app(page, sizeof(page), &off, "<div class='grid'>\n");
     for (int i = 0; i < N_DASH; i++) {
@@ -349,7 +349,7 @@ int main(int argc, char **argv) {
         return EXIT_FAILURE;
     }
 
-    printf("🟢 Sunucu çalışıyor: http://127.0.0.1:%d\n", port);
+    printf("✓ Sunucu çalışıyor: http://127.0.0.1:%d\n", port);
     fflush(stdout);
 
     for (;;) {
