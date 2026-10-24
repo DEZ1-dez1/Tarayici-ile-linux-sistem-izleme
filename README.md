@@ -15,11 +15,11 @@ Harici hiçbir kütüphane (framework) kullanmaksızın, tamamen **saf C diliyle
 
 ## 🚀 Derleme ve Çalıştırma
 
-Depoyu klonladıktan sonra terminalde şu komutları çalıştırman yeterlidir:
+Depoyu klonladıktan sonra aşadaki kodu düzenledikten sonra konsola yapıştıştıra bilirsiniz.
 
-```bash
-# Derleme
-make
+```
+bash
+gcc dosya_adi.c -o dosya.adi
 
-# Çalıştırma (Varsayılan Port: 8080)
-./server
+./dosya_adi
+
